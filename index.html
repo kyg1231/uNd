@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="setP()">
+
+	<input id="un" type="text" placeholder="1~100사이에 숫자를 입력하세요">
+	<button onclick="showrandom()"> click </button>
+	<br>
+	<p id="op"></p>
+	<p id="his"></p>
+<script>
+
+var c;
+var q=""
+function setP() {
+	c=Math.random()*100
+	c=Math.floor(c)
+	console.log(c)
+}
+
+
+function showrandom()
+{
+
+
+
+
+
+var r= document.querySelector("#un").value
+
+
+q=q+r
+
+
+if(r>c)
+{
+	document.querySelector("#op").innerHTML="더 낮습니다."
+	
+}
+if(r<c)
+{
+	document.querySelector("#op").innerHTML="더 높습니다."
+}
+if(r==c)
+{
+	document.querySelector("#op").innerHTML="정답입니다!"
+}
+document.querySelector("#his").innerHTML=q
+q=q+"<br><br>"
+
+}
+
+
+</script>
+
+</body>
+
+</html>
